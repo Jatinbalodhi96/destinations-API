@@ -10,7 +10,7 @@ mongoClient.connect('mongodb://localhost:27017/monuments', function (err, db) {
 });
 
 router.get('/', function (req, res, next) {
-   res.render('index', {'title': 'Monument Api'});
+   res.render('index', {'title': 'Monument Api', 'note': 'Currently the front page is under maintainance please checkout Github link below'});
 });
 
 router.get('/api/all', function(req, res, next) {
