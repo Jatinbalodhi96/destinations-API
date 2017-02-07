@@ -9,6 +9,10 @@ mongoClient.connect('mongodb://localhost:27017/monuments', function (err, db) {
     database = db;
 });
 
+router.get('/', function (req, res, next) {
+   res.render('index', {'title': 'Monument Api'});
+});
+
 router.get('/api/all', function(req, res, next) {
     database.collection("monuments").find({}).toArray(function (err, data) {
         res.json(data);
