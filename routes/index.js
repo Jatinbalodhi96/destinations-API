@@ -25,6 +25,12 @@ router.get('/api/:city', function (req, res, next) {
    });
 });
 
+router.get('/api/:state', function (req, res, next) {
+    database.collection("monuments").find({'state' : req.params.state}).toArray(function (err, data) {
+        res.json(data);
+    });
+});
+
 router.get('/api/monument/:monument_name', function (req, res, next) {
     database.collection("monuments").find({'monuments.monument_name' : req.params.monument_name},
         {"monuments.$" : 1}).toArray(function (err, data) {
@@ -33,7 +39,5 @@ router.get('/api/monument/:monument_name', function (req, res, next) {
     });
 });
 
-router.post('/api/add/:city/:about', function (req, res, next) {
-    database.collection("monuments").insert()
-});
+
 module.exports = router;
