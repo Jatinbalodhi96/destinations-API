@@ -13,6 +13,10 @@ router.get('/', function (req, res, next) {
    res.render('index', {'title': 'Monument Api', 'note': 'Currently the front page is under maintainance please checkout Github link below'});
 });
 
+router.get('/api', function (req, res, next) {
+   res.redirect('/api/all');
+});
+
 router.get('/api/all', function(req, res, next) {
     database.collection("monuments").find({}).toArray(function (err, data) {
         res.json(data);
