@@ -19,13 +19,13 @@ router.get('/api/all', function(req, res, next) {
     });
 });
 
-router.get('/api/:city', function (req, res, next) {
+router.get('/api/city/:city', function (req, res, next) {
    database.collection("monuments").find({'city' : req.params.city}).toArray(function (err, data) {
        res.json(data);
    });
 });
 
-router.get('/api/:state', function (req, res, next) {
+router.get('/api/state/:state', function (req, res, next) {
     database.collection("monuments").find({'state' : req.params.state}).toArray(function (err, data) {
         res.json(data);
     });
