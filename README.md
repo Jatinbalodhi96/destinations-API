@@ -6,5 +6,6 @@ currently under development phase and data is still updating currently for Delhi
 ## Docs
 
 - getting all data http://ec2-35-154-154-13.ap-south-1.compute.amazonaws.com:3000/api/all
-- getting specific cities http://ec2-35-154-154-13.ap-south-1.compute.amazonaws.com:3000/api/city_name
+- getting specific cities http://ec2-35-154-154-13.ap-south-1.compute.amazonaws.com:3000/api/city/city_name
+- getting specific states http://ec2-35-154-154-13.ap-south-1.compute.amazonaws.com:3000/api/state/state_name
 - getting specific monument data http://ec2-35-154-154-13.ap-south-1.compute.amazonaws.com:3000/api/monument/Red%20Fort
